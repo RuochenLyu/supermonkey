@@ -9,8 +9,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "yarn build && rm -rf ./out && next export",
-    "deploy": "touch out/.nojekyll && gh-pages -d out"
+    "export": "yarn build && next export",
+    "deploy": "yarn export && touch out/.nojekyll && touch out/CNAME && echo \"kshift.me\" >> out/CNAME && gh-pages -t -d out"
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",

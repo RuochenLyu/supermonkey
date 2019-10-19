@@ -34,7 +34,9 @@ class Index extends React.Component {
 
   async fetch(currentCity) {
     this.setState({ loading: true });
-    const result = await fetch(`/static/${currentCity}.json`);
+    const result = await fetch(
+      `//raw.githubusercontent.com/RuochenLyu/supermonkey/master/static/${currentCity}.json`
+    );
     const json = await result.json();
 
     let boxId = localStorage.getItem("sm/boxId") * 1;
@@ -67,7 +69,7 @@ class Index extends React.Component {
         <Head
           title="超级猩猩·课程表"
           description="超级猩猩健身在线课程表"
-          url="https://super.kshift.me"
+          url="https://kshift.me/supermonkey"
         />
         <nav>
           <CityPicker
