@@ -9,7 +9,6 @@ module.exports = withSass({
 
     return config;
   },
-  assetPrefix: process.env.NODE_ENV === "production" ? "/supermonkey" : "",
   exportPathMap: async function(defaultPathMap) {
     return {
       "/": { page: "/" },
