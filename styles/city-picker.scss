@@ -1,0 +1,76 @@
+@import "./variables";
+
+$height: 52px;
+
+.picker {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  height: $height;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.current {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  line-height: 32px;
+  cursor: pointer;
+
+  &[data-opend="true"] svg {
+    transform: rotate(-180deg);
+  }
+
+  img {
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 200ms ease-in-out;
+  }
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(#{$height} - 8px);
+  right: 0;
+  left: 16px;
+  padding: 8px 0;
+  background-color: #fff;
+  z-index: 10;
+  opacity: 0;
+  border-radius: 8px;
+  transition: all 200ms ease-in-out;
+  pointer-events: none;
+  @include shadow-small;
+
+  &[data-opend="true"] {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.city {
+  padding-left: 28px;
+  line-height: 32px;
+  color: $text-color-lighter;
+  transition: all 100ms ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    color: $text-color-default;
+    background-color: $ui-color;
+  }
+
+  &[data-current="true"] {
+    display: none;
+  }
+}

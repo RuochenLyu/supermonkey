@@ -1,0 +1,60 @@
+$bg-color: #f3f3f3;
+$bg-light-color: #edf2f5;
+$ui-color: #fcc800;
+
+$g0: #000000;
+$g1: #333333;
+$g2: #555555;
+$g3: #777777;
+$g4: #999999;
+$g5: #cccccc;
+$g6: #e3e3e3;
+$g7: #efefef;
+$g8: #f6f6f6;
+$g9: #ffffff;
+
+// FONT
+$font-family: -apple-system, "Helvetica Neue", Helvetica, "PingFang SC",
+  "Hiragino Sans GB", "Microsoft YaHei", SimSun, "Segoe UI", Roboto, sans-serif;
+$font-family-monospace: Consolas, Menlo, Monaco, Courier, monospace;
+
+$font-size-xx-large: 24px;
+$font-size-x-large: 20px;
+$font-size-large: 18px;
+$font-size-medium: 16px;
+$font-size-small: 14px;
+$font-size-x-small: 12px;
+
+// COLORS
+$text-color-default: $g0;
+$text-color-light: $g2;
+$text-color-lighter: #7e8e99;
+// end of COLORS
+
+@mixin shadow-small($color: rgba(0, 0, 0, 0.16)) {
+  box-shadow: 0 4px 8px 0 $color;
+}
+
+@mixin shadow-medium($color: rgba(0, 0, 0, 0.16)) {
+  box-shadow: 0 8px 12px 0 $color;
+}
+
+@mixin shadow-large($color: rgba(0, 0, 0, 0.16)) {
+  box-shadow: 0 12px 24px 0 $color;
+}
+
+@mixin text-overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin break-word {
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+@mixin hide-text {
+  text-indent: -9999px;
+  overflow: hidden;
+}

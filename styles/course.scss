@@ -1,0 +1,68 @@
+@import "./variables";
+
+.course {
+  position: relative;
+  margin: 8px 0 12px;
+  padding: 4px 8px;
+  line-height: 1.25;
+  background-color: #fff;
+  border-radius: 8px;
+  transition: all 200ms ease-in-out;
+
+  &:hover {
+    @include shadow-medium;
+    transform: scale(1.2);
+    z-index: 9;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  font-family: $font-family-monospace;
+  font-size: $font-size-x-small;
+  color: $text-color-lighter;
+  line-height: 20px;
+}
+
+.time {
+  font-weight: 500;
+}
+
+.price[data-cheap="true"] {
+  color: $ui-color;
+  font-weight: 500;
+}
+
+.title {
+  font-weight: normal;
+  font-size: $font-size-small;
+  @include text-overflow;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  font-size: $font-size-x-small;
+  color: $text-color-lighter;
+}
+
+.avatar {
+  margin-right: 8px;
+  min-width: 20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.info-main {
+  flex: 1;
+  transform: scale(0.8);
+  transform-origin: left;
+  overflow: hidden;
+}
+
+.tags {
+  @include text-overflow;
+}

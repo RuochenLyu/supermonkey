@@ -1,0 +1,26 @@
+@import "./variables";
+
+.box {
+  position: relative;
+  margin: 8px 0;
+  padding-left: 16px;
+  line-height: 32px;
+  font-weight: 500;
+  font-size: $font-size-small;
+  color: $text-color-lighter;
+  transition: all 100ms ease-in-out;
+  border-radius: 4px;
+  cursor: pointer;
+  @include text-overflow;
+
+  &:hover {
+    color: $text-color-default;
+    background-color: $ui-color;
+  }
+
+  &[data-current="true"] {
+    pointer-events: none;
+    color: $text-color-default;
+    background-color: $ui-color;
+  }
+}

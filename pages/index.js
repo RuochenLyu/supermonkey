@@ -1,91 +1,93 @@
-import React from 'react'
-import Link from 'next/link'
-import Head from '../components/head'
-import Nav from '../components/nav'
+import React from "react";
+import fetch from "isomorphic-unfetch";
+import "../styles/reset.scss";
+import "../styles/global.scss";
+import style from "../styles/layout.scss";
 
-const Home = () => (
-  <div>
-    <Head title="Home" />
-    <Nav />
+import Loading from "../components/loading";
+import Head from "../components/head";
+import CityPicker from "../components/city-picker";
+import BoxList from "../components/box-list";
+import Schedule from "../components/schedule";
 
-    <div className="hero">
-      <h1 className="title">Welcome to Next!</h1>
-      <p className="description">
-        To get started, edit <code>pages/index.js</code> and save to reload.
-      </p>
+class Index extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleBoxIdChange = this.handleBoxIdChange.bind(this);
+    this.handleCurrentCityChange = this.handleCurrentCityChange.bind(this);
+    this.state = { loading: true };
+  }
 
-      <div className="row">
-        <Link href="https://github.com/zeit/next.js#getting-started">
-          <a className="card">
-            <h3>Getting Started &rarr;</h3>
-            <p>Learn more about Next on Github and in their examples</p>
-          </a>
-        </Link>
-        <Link href="https://open.segment.com/create-next-app">
-          <a className="card">
-            <h3>Examples &rarr;</h3>
-            <p>
-              Find other example boilerplates on the{' '}
-              <code>create-next-app</code> site
-            </p>
-          </a>
-        </Link>
-        <Link href="https://github.com/segmentio/create-next-app">
-          <a className="card">
-            <h3>Create Next App &rarr;</h3>
-            <p>Was this tool helpful? Let us know how we can improve it</p>
-          </a>
-        </Link>
+  handleBoxIdChange(boxId) {
+    this.setState({ boxId });
+    localStorage.setItem("sm/boxId", boxId);
+  }
+
+  handleCurrentCityChange(currentCity) {
+    this.fetch(currentCity);
+  }
+
+  componentDidMount() {
+    const currentCity = localStorage.getItem("sm/currentCity") || "北京市";
+    this.fetch(currentCity);
+  }
+
+  async fetch(currentCity) {
+    this.setState({ loading: true });
+    const result = await fetch(
+      `//raw.githubusercontent.com/RuochenLyu/supermonkey/master/static/${currentCity}.json`
+    );
+    const json = await result.json();
+
+    let boxId = localStorage.getItem("sm/boxId") * 1;
+    const { cityMap } = json.data.main.boxArea;
+    const { boxList } = cityMap[currentCity][0];
+
+    if (boxList.every(item => item.boxId !== boxId)) {
+      boxId = boxList[0].boxId;
+    }
+
+    this.setState({
+      loading: false,
+      data: json.data,
+      boxId,
+      currentCity,
+    });
+    localStorage.setItem("sm/boxId", boxId);
+    localStorage.setItem("sm/currentCity", currentCity);
+  }
+
+  render() {
+    const { loading } = this.state;
+    if (loading) return <Loading />;
+
+    const { data, boxId, currentCity } = this.state;
+    const { cityList } = data.main.boxArea;
+
+    return (
+      <div className={style.main}>
+        <Head
+          title="超级猩猩·课程表"
+          description="超级猩猩健身在线课程表"
+          url="https://super.kshift.me"
+        />
+        <nav>
+          <CityPicker
+            cityList={cityList}
+            currentCity={currentCity}
+            onCurrentCityChange={this.handleCurrentCityChange}
+          />
+          <BoxList
+            data={data}
+            boxId={boxId}
+            currentCity={currentCity}
+            onBoxIdChange={this.handleBoxIdChange}
+          />
+        </nav>
+        <Schedule data={data} boxId={boxId} />
       </div>
-    </div>
+    );
+  }
+}
 
-    <style jsx>{`
-      .hero {
-        width: 100%;
-        color: #333;
-      }
-      .title {
-        margin: 0;
-        width: 100%;
-        padding-top: 80px;
-        line-height: 1.15;
-        font-size: 48px;
-      }
-      .title,
-      .description {
-        text-align: center;
-      }
-      .row {
-        max-width: 880px;
-        margin: 80px auto 40px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-      }
-      .card {
-        padding: 18px 18px 24px;
-        width: 220px;
-        text-align: left;
-        text-decoration: none;
-        color: #434343;
-        border: 1px solid #9b9b9b;
-      }
-      .card:hover {
-        border-color: #067df7;
-      }
-      .card h3 {
-        margin: 0;
-        color: #067df7;
-        font-size: 18px;
-      }
-      .card p {
-        margin: 0;
-        padding: 12px 0 0;
-        font-size: 13px;
-        color: #333;
-      }
-    `}</style>
-  </div>
-)
-
-export default Home
+export default Index;
