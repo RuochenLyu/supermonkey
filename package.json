@@ -9,7 +9,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "yarn build && rm -rf ./out && next export"
+    "export": "yarn build && rm -rf ./out && next export",
+    "deploy": "touch out/.nojekyll && gh-pages -d out"
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
@@ -25,5 +26,8 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:RuochenLyu/supermonkey.git"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.1.1"
   }
 }
