@@ -34,9 +34,7 @@ class Index extends React.Component {
 
   async fetch(currentCity) {
     this.setState({ loading: true });
-    const result = await fetch(
-      `//raw.githubusercontent.com/RuochenLyu/supermonkey/master/static/${currentCity}.json`
-    );
+    const result = await fetch(`/static/${currentCity}.json`);
     const json = await result.json();
 
     let boxId = localStorage.getItem("sm/boxId") * 1;

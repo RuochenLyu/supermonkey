@@ -9,7 +9,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "yarn build && next export"
+    "export": "yarn build && rm -rf ./out && next export"
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
