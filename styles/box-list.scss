@@ -1,5 +1,18 @@
 @import "./variables";
 
+$height: 48px;
+
+.list {
+  position: fixed;
+  top: $height;
+  left: 0;
+  bottom: 0;
+  width: 15%;
+  padding: 0 8px 40px;
+  overflow-y: auto;
+  z-index: 1;
+}
+
 .box {
   position: relative;
   margin: 8px 0;

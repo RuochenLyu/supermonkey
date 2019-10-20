@@ -5,11 +5,19 @@ import format from "../utils/format";
 import Image from "./image";
 import style from "../styles/course.scss";
 
+const BookingStatus = {
+  0: "预约",
+  1: "紧张",
+  2: "满员",
+  3: "结束",
+};
+
 const Course = props => {
   const { data, course } = props;
   const { classinfoSmallMap, trainerSmallMap } = data;
   const classInfo = classinfoSmallMap[course.classId];
   const trainer = trainerSmallMap[course.trainerUserId];
+  const status = data.main.priceMap[course.scheduleId].bookingCountStatus;
 
   return (
     <div className={style.course}>
@@ -32,6 +40,9 @@ const Course = props => {
         <div className={style["info-main"]}>
           <div>{trainer.trainerStageName}</div>
           <div className={style.tags}>{classInfo.tag.join(" · ")}</div>
+        </div>
+        <div className={style.status} data-status={status}>
+          {BookingStatus[status]}
         </div>
       </div>
     </div>

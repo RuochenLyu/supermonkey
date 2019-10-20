@@ -21,7 +21,7 @@ class Index extends React.Component {
 
   handleBoxIdChange(boxId) {
     this.setState({ boxId });
-    localStorage.setItem("sm/boxId", boxId);
+    localStorage.setItem("boxId", boxId);
   }
 
   handleCurrentCityChange(currentCity) {
@@ -29,18 +29,18 @@ class Index extends React.Component {
   }
 
   componentDidMount() {
-    const currentCity = localStorage.getItem("sm/currentCity") || "北京市";
+    const currentCity = localStorage.getItem("currentCity") || "北京市";
     this.fetch(currentCity);
   }
 
   async fetch(currentCity) {
     this.setState({ loading: true });
     const result = await fetch(
-      `//raw.githubusercontent.com/RuochenLyu/supermonkey/master/static/${currentCity}.json`
+      `//raw.githubusercontent.com/RuochenLyu/ruochenlyu.github.io/master/supermonkey/${currentCity}.json`
     );
     const json = await result.json();
 
-    let boxId = localStorage.getItem("sm/boxId") * 1;
+    let boxId = localStorage.getItem("boxId") * 1;
     const { cityMap } = json.data.main.boxArea;
     const { boxList } = cityMap[currentCity][0];
 
@@ -54,8 +54,8 @@ class Index extends React.Component {
       boxId,
       currentCity,
     });
-    localStorage.setItem("sm/boxId", boxId);
-    localStorage.setItem("sm/currentCity", currentCity);
+    localStorage.setItem("boxId", boxId);
+    localStorage.setItem("currentCity", currentCity);
   }
 
   render() {
@@ -79,19 +79,17 @@ class Index extends React.Component {
         <Qrcode />
         <Head />
         <div className={style.main}>
-          <nav>
-            <CityPicker
-              cityList={cityList}
-              currentCity={currentCity}
-              onCurrentCityChange={this.handleCurrentCityChange}
-            />
-            <BoxList
-              data={data}
-              boxId={boxId}
-              currentCity={currentCity}
-              onBoxIdChange={this.handleBoxIdChange}
-            />
-          </nav>
+          <CityPicker
+            cityList={cityList}
+            currentCity={currentCity}
+            onCurrentCityChange={this.handleCurrentCityChange}
+          />
+          <BoxList
+            data={data}
+            boxId={boxId}
+            currentCity={currentCity}
+            onBoxIdChange={this.handleBoxIdChange}
+          />
           <Schedule data={data} boxId={boxId} />
         </div>
       </div>

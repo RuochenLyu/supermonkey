@@ -41,6 +41,7 @@
 }
 
 .info {
+  position: relative;
   display: flex;
   align-items: center;
   font-size: $font-size-x-small;
@@ -65,4 +66,27 @@
 
 .tags {
   @include text-overflow;
+}
+
+.status {
+  position: absolute;
+  right: 0;
+  bottom: 2px;
+  opacity: 0.5;
+  font-weight: 500;
+  transform: scale(0.8);
+  transform-origin: right;
+
+  &[data-status="0"],
+  &[data-status="3"] {
+    display: none;
+  }
+
+  &[data-status="1"] {
+    color: orange;
+  }
+
+  &[data-status="2"] {
+    color: red;
+  }
 }
