@@ -1,1 +1,0 @@
-{"ast":null,"code":"import isToday from \"date-fns/isToday\";\nimport parse from \"date-fns/parse\";\nexport default function (date) {\n  date = parse(date, \"yyyy-MM-dd\", new Date());\n  return isToday(new Date(date));\n}","map":null,"metadata":{},"sourceType":"module"}
