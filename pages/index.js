@@ -1,5 +1,7 @@
 import React from "react";
 import fetch from "isomorphic-unfetch";
+import ReactGA from "react-ga";
+
 import "../styles/reset.scss";
 import "../styles/global.scss";
 import style from "../styles/layout.scss";
@@ -29,6 +31,7 @@ class Index extends React.Component {
   }
 
   componentDidMount() {
+    ReactGA.initialize("UA-150431358-1");
     const currentCity = localStorage.getItem("currentCity") || "北京市";
     this.fetch(currentCity);
   }
