@@ -3,7 +3,7 @@ import NextHead from "next/head";
 import PropTypes from "prop-types";
 
 const defaultTitle = "超级猩猩·课程表";
-const defaultDescription = "超级猩猩健身在线课程表";
+const defaultDescription = "Super Life Super Me. 超级猩猩健身在线课程表";
 const defaultOGURL = "https://super.kshift.me";
 const defaultOGImage = "https://i.loli.net/2019/10/20/oE7sunp5V4ZBx69.jpg";
 
