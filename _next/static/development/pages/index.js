@@ -52320,9 +52320,9 @@ function (_React$Component) {
   }, {
     key: "componentDidMount",
     value: function componentDidMount() {
+      react_ga__WEBPACK_IMPORTED_MODULE_10__["default"].initialize("UA-150431358-1");
       var currentCity = localStorage.getItem("currentCity") || "北京市";
       this.fetch(currentCity);
-      react_ga__WEBPACK_IMPORTED_MODULE_10__["default"].initialize("UA-150431358-1");
     }
   }, {
     key: "fetch",

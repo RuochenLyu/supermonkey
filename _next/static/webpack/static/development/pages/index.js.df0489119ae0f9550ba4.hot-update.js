@@ -1,41 +1,5 @@
 webpackHotUpdate("static/development/pages/index.js",{
 
-/***/ "./node_modules/react-ga/dist/esm/components/OutboundLink.js":
-false,
-
-/***/ "./node_modules/react-ga/dist/esm/core.js":
-false,
-
-/***/ "./node_modules/react-ga/dist/esm/index.js":
-false,
-
-/***/ "./node_modules/react-ga/dist/esm/utils/console/log.js":
-false,
-
-/***/ "./node_modules/react-ga/dist/esm/utils/console/warn.js":
-false,
-
-/***/ "./node_modules/react-ga/dist/esm/utils/format.js":
-false,
-
-/***/ "./node_modules/react-ga/dist/esm/utils/loadGA.js":
-false,
-
-/***/ "./node_modules/react-ga/dist/esm/utils/mightBeEmail.js":
-false,
-
-/***/ "./node_modules/react-ga/dist/esm/utils/removeLeadingSlash.js":
-false,
-
-/***/ "./node_modules/react-ga/dist/esm/utils/testModeAPI.js":
-false,
-
-/***/ "./node_modules/react-ga/dist/esm/utils/toTitleCase.js":
-false,
-
-/***/ "./node_modules/react-ga/dist/esm/utils/trim.js":
-false,
-
 /***/ "./pages/index.js":
 /*!************************!*\
   !*** ./pages/index.js ***!
@@ -58,18 +22,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/isomorphic-unfetch/browser.js");
 /* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _styles_reset_scss__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../styles/reset.scss */ "./styles/reset.scss");
-/* harmony import */ var _styles_reset_scss__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_styles_reset_scss__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _styles_global_scss__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../styles/global.scss */ "./styles/global.scss");
-/* harmony import */ var _styles_global_scss__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_styles_global_scss__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _styles_layout_scss__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../styles/layout.scss */ "./styles/layout.scss");
-/* harmony import */ var _styles_layout_scss__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_styles_layout_scss__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var _components_loading__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../components/loading */ "./components/loading.js");
-/* harmony import */ var _components_head__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../components/head */ "./components/head.js");
-/* harmony import */ var _components_city_picker__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../components/city-picker */ "./components/city-picker.js");
-/* harmony import */ var _components_box_list__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../components/box-list */ "./components/box-list.js");
-/* harmony import */ var _components_schedule__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../components/schedule */ "./components/schedule.js");
-/* harmony import */ var _components_qrcode__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../components/qrcode */ "./components/qrcode.js");
+/* harmony import */ var react_ga__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-ga */ "./node_modules/react-ga/dist/esm/index.js");
+/* harmony import */ var _styles_reset_scss__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../styles/reset.scss */ "./styles/reset.scss");
+/* harmony import */ var _styles_reset_scss__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_styles_reset_scss__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _styles_global_scss__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../styles/global.scss */ "./styles/global.scss");
+/* harmony import */ var _styles_global_scss__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_styles_global_scss__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _styles_layout_scss__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../styles/layout.scss */ "./styles/layout.scss");
+/* harmony import */ var _styles_layout_scss__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_styles_layout_scss__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _components_loading__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../components/loading */ "./components/loading.js");
+/* harmony import */ var _components_head__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../components/head */ "./components/head.js");
+/* harmony import */ var _components_city_picker__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../components/city-picker */ "./components/city-picker.js");
+/* harmony import */ var _components_box_list__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../components/box-list */ "./components/box-list.js");
+/* harmony import */ var _components_schedule__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../components/schedule */ "./components/schedule.js");
+/* harmony import */ var _components_qrcode__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../components/qrcode */ "./components/qrcode.js");
 
 
 
@@ -81,7 +46,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/ruochen/Documents/workspace/supermonkey/pages/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement;
 
- // import ReactGA from 'react-ga';
+
 
 
 
@@ -128,7 +93,7 @@ function (_React$Component) {
   }, {
     key: "componentDidMount",
     value: function componentDidMount() {
-      // ReactGA.initialize('GTM-KW4BQHN');
+      react_ga__WEBPACK_IMPORTED_MODULE_10__["default"].initialize("UA-150431358-1");
       var currentCity = localStorage.getItem("currentCity") || "北京市";
       this.fetch(currentCity);
     }
@@ -196,32 +161,32 @@ function (_React$Component) {
         return __jsx("div", {
           __source: {
             fileName: _jsxFileName,
+            lineNumber: 67
+          },
+          __self: this
+        }, __jsx(_components_head__WEBPACK_IMPORTED_MODULE_15__["default"], {
+          __source: {
+            fileName: _jsxFileName,
             lineNumber: 68
           },
           __self: this
-        }, __jsx(_components_head__WEBPACK_IMPORTED_MODULE_14__["default"], {
+        }), __jsx("div", {
+          className: _styles_layout_scss__WEBPACK_IMPORTED_MODULE_13___default.a.main,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 69
           },
           __self: this
-        }), __jsx("div", {
-          className: _styles_layout_scss__WEBPACK_IMPORTED_MODULE_12___default.a.main,
+        }, __jsx(_components_loading__WEBPACK_IMPORTED_MODULE_14__["default"], {
           __source: {
             fileName: _jsxFileName,
             lineNumber: 70
           },
           __self: this
-        }, __jsx(_components_loading__WEBPACK_IMPORTED_MODULE_13__["default"], {
+        })), __jsx(_components_qrcode__WEBPACK_IMPORTED_MODULE_19__["default"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 71
-          },
-          __self: this
-        })), __jsx(_components_qrcode__WEBPACK_IMPORTED_MODULE_18__["default"], {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 73
+            lineNumber: 72
           },
           __self: this
         }));
@@ -235,53 +200,53 @@ function (_React$Component) {
       return __jsx("div", {
         __source: {
           fileName: _jsxFileName,
+          lineNumber: 81
+        },
+        __self: this
+      }, __jsx(_components_qrcode__WEBPACK_IMPORTED_MODULE_19__["default"], {
+        __source: {
+          fileName: _jsxFileName,
           lineNumber: 82
         },
         __self: this
-      }, __jsx(_components_qrcode__WEBPACK_IMPORTED_MODULE_18__["default"], {
+      }), __jsx(_components_head__WEBPACK_IMPORTED_MODULE_15__["default"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 83
         },
         __self: this
-      }), __jsx(_components_head__WEBPACK_IMPORTED_MODULE_14__["default"], {
+      }), __jsx("div", {
+        className: _styles_layout_scss__WEBPACK_IMPORTED_MODULE_13___default.a.main,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 84
         },
         __self: this
-      }), __jsx("div", {
-        className: _styles_layout_scss__WEBPACK_IMPORTED_MODULE_12___default.a.main,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 85
-        },
-        __self: this
-      }, __jsx(_components_city_picker__WEBPACK_IMPORTED_MODULE_15__["default"], {
+      }, __jsx(_components_city_picker__WEBPACK_IMPORTED_MODULE_16__["default"], {
         cityList: cityList,
         currentCity: currentCity,
         onCurrentCityChange: this.handleCurrentCityChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 86
+          lineNumber: 85
         },
         __self: this
-      }), __jsx(_components_box_list__WEBPACK_IMPORTED_MODULE_16__["default"], {
+      }), __jsx(_components_box_list__WEBPACK_IMPORTED_MODULE_17__["default"], {
         data: data,
         boxId: boxId,
         currentCity: currentCity,
         onBoxIdChange: this.handleBoxIdChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 91
+          lineNumber: 90
         },
         __self: this
-      }), __jsx(_components_schedule__WEBPACK_IMPORTED_MODULE_17__["default"], {
+      }), __jsx(_components_schedule__WEBPACK_IMPORTED_MODULE_18__["default"], {
         data: data,
         boxId: boxId,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 97
+          lineNumber: 96
         },
         __self: this
       })));
@@ -296,4 +261,4 @@ function (_React$Component) {
 /***/ })
 
 })
-//# sourceMappingURL=index.js.ee6a9caa3263f78dc45f.hot-update.js.map
+//# sourceMappingURL=index.js.df0489119ae0f9550ba4.hot-update.js.map
