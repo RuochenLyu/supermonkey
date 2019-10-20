@@ -16,3 +16,9 @@
     margin-left: 15%;
   }
 }
+
+@media (max-width: 767.98px) {
+  .main {
+    display: none;
+  }
+}

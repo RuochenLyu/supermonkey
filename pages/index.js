@@ -9,6 +9,7 @@ import Head from "../components/head";
 import CityPicker from "../components/city-picker";
 import BoxList from "../components/box-list";
 import Schedule from "../components/schedule";
+import Qrcode from "../components/qrcode";
 
 class Index extends React.Component {
   constructor(props) {
@@ -58,12 +59,14 @@ class Index extends React.Component {
   }
 
   render() {
-    const { loading } = this.state;
-    if (loading) {
+    if (this.state.loading) {
       return (
         <div>
           <Head />
-          <Loading />
+          <div className={style.main}>
+            <Loading />
+          </div>
+          <Qrcode />
         </div>
       );
     }
@@ -72,22 +75,25 @@ class Index extends React.Component {
     const { cityList } = data.main.boxArea;
 
     return (
-      <div className={style.main}>
+      <div>
+        <Qrcode />
         <Head />
-        <nav>
-          <CityPicker
-            cityList={cityList}
-            currentCity={currentCity}
-            onCurrentCityChange={this.handleCurrentCityChange}
-          />
-          <BoxList
-            data={data}
-            boxId={boxId}
-            currentCity={currentCity}
-            onBoxIdChange={this.handleBoxIdChange}
-          />
-        </nav>
-        <Schedule data={data} boxId={boxId} />
+        <div className={style.main}>
+          <nav>
+            <CityPicker
+              cityList={cityList}
+              currentCity={currentCity}
+              onCurrentCityChange={this.handleCurrentCityChange}
+            />
+            <BoxList
+              data={data}
+              boxId={boxId}
+              currentCity={currentCity}
+              onBoxIdChange={this.handleBoxIdChange}
+            />
+          </nav>
+          <Schedule data={data} boxId={boxId} />
+        </div>
       </div>
     );
   }

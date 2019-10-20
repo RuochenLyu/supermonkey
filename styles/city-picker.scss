@@ -1,6 +1,6 @@
 @import "./variables";
 
-$height: 52px;
+$height: 48px;
 
 .picker {
   position: sticky;
@@ -21,6 +21,7 @@ $height: 52px;
   flex: 1;
   line-height: 32px;
   cursor: pointer;
+  @include text-overflow;
 
   &[data-opend="true"] svg {
     transform: rotate(-180deg);
@@ -67,6 +68,7 @@ $height: 52px;
   color: $text-color-lighter;
   transition: all 100ms ease-in-out;
   cursor: pointer;
+  @include text-overflow;
 
   &:hover {
     color: $text-color-default;

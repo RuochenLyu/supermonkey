@@ -14,9 +14,11 @@ $g8: #f6f6f6;
 $g9: #ffffff;
 
 // FONT
-$font-family: -apple-system, "Helvetica Neue", Helvetica, "PingFang SC",
-  "Hiragino Sans GB", "Microsoft YaHei", SimSun, "Segoe UI", Roboto, sans-serif;
-$font-family-monospace: Consolas, Menlo, Monaco, Courier, monospace;
+$font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+// $font-family-monospace: Consolas, Menlo, Monaco, Courier, monospace;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+  "Liberation Mono", "Courier New", monospace;
 
 $font-size-xx-large: 24px;
 $font-size-x-large: 20px;

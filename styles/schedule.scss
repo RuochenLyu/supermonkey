@@ -1,6 +1,6 @@
 @import "./variables";
 
-$header-width: 52px;
+$header-width: 48px;
 
 .main {
   display: flex;
@@ -35,7 +35,7 @@ $header-width: 52px;
   background-color: $bg-color;
 
   h2 {
-    font-size: $font-size-xx-large;
+    font-size: $font-size-x-large;
   }
 }
 
@@ -55,6 +55,7 @@ $header-width: 52px;
   font-size: $font-size-small;
   background-color: $ui-color;
   border-radius: 12px;
+  @include text-overflow;
 }
 
 .init {
@@ -62,4 +63,39 @@ $header-width: 52px;
   text-align: center;
   font-size: $font-size-small;
   color: $text-color-lighter;
+}
+
+@media (max-width: 1024px) {
+  .list {
+    width: 19%;
+
+    &:nth-last-child(1) {
+      display: none;
+    }
+  }
+
+  .header {
+    padding-left: 0;
+
+    h2 {
+      font-size: $font-size-large;
+    }
+  }
+
+  .today {
+    padding: 0 4px;
+    height: 20px;
+    line-height: 20px;
+    font-size: $font-size-x-small;
+  }
+}
+
+@media (max-width: 768px) {
+  .list {
+    width: 24%;
+
+    &:nth-last-child(2) {
+      display: none;
+    }
+  }
 }
