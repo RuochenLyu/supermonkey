@@ -32,6 +32,7 @@ class Index extends React.Component {
 
   componentDidMount() {
     ReactGA.initialize("UA-150431358-1");
+    ReactGA.pageview(location.pathname);
     const currentCity = localStorage.getItem("currentCity") || "北京市";
     this.fetch(currentCity);
   }
