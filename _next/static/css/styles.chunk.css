@@ -67,19 +67,6 @@ body {
   user-select: none;
   -webkit-tap-highlight-color: transparent; }
 
-._1BDVL-Bhp7QlGHLiSexuYX nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 15%;
-  padding: 0 8px 40px;
-  overflow-y: auto;
-  z-index: 9; }
-
-._1BDVL-Bhp7QlGHLiSexuYX main {
-  margin-left: 15%; }
-
 @media (max-width: 767.98px) {
   ._1BDVL-Bhp7QlGHLiSexuYX {
     display: none; } }
@@ -132,8 +119,10 @@ body {
     transform: scale(1); } }
 
 ._1wDCu9G4gLusTOShcvCMD6 {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 15%;
   display: flex;
   align-items: center;
   padding-left: 16px;
@@ -157,9 +146,7 @@ body {
   ._2838s10ThXBdcFp0feJGjr img {
     margin-right: 8px;
     width: 20px;
-    height: 20px;
-    border-radius: 4px;
-    overflow: hidden; }
+    height: 20px; }
   ._2838s10ThXBdcFp0feJGjr svg {
     width: 16px;
     height: 16px;
@@ -196,6 +183,16 @@ body {
     background-color: #fcc800; }
   ._26ldnl7225HcsdHzWWCTeu[data-current="true"] {
     display: none; }
+
+._3yfV0A2dAsl6FDOD-_nPr3 {
+  position: fixed;
+  top: 48px;
+  left: 0;
+  bottom: 0;
+  width: 15%;
+  padding: 0 8px 40px;
+  overflow-y: auto;
+  z-index: 1; }
 
 ._7OS_zMaTiNIqx42KDPY4E {
   position: relative;
@@ -255,6 +252,7 @@ body {
   text-overflow: ellipsis; }
 
 ._2bzDH6sAEO5ugjLpggsWv4 {
+  position: relative;
   display: flex;
   align-items: center;
   font-size: 12px;
@@ -279,9 +277,25 @@ body {
   white-space: nowrap;
   text-overflow: ellipsis; }
 
+._1oWhTtepolqDnmqvLCFQVK {
+  position: absolute;
+  right: 0;
+  bottom: 2px;
+  opacity: 0.5;
+  font-weight: 500;
+  transform: scale(0.8);
+  transform-origin: right; }
+  ._1oWhTtepolqDnmqvLCFQVK[data-status="0"], ._1oWhTtepolqDnmqvLCFQVK[data-status="3"] {
+    display: none; }
+  ._1oWhTtepolqDnmqvLCFQVK[data-status="1"] {
+    color: orange; }
+  ._1oWhTtepolqDnmqvLCFQVK[data-status="2"] {
+    color: red; }
+
 ._2UW2d_jz1JwdXt3UHA1cgi {
   display: flex;
-  justify-content: space-around; }
+  justify-content: space-around;
+  margin-left: 15%; }
 
 .E4Xth4tHwpfWv8k0GClF0 {
   position: fixed;

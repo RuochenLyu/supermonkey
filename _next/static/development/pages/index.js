@@ -290,6 +290,12 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+var BookingStatus = {
+  0: "预约",
+  1: "紧张",
+  2: "满员",
+  3: "结束"
+};
 
 var Course = function Course(props) {
   var data = props.data,
@@ -298,25 +304,26 @@ var Course = function Course(props) {
       trainerSmallMap = data.trainerSmallMap;
   var classInfo = classinfoSmallMap[course.classId];
   var trainer = trainerSmallMap[course.trainerUserId];
+  var status = data.main.priceMap[course.scheduleId].bookingCountStatus;
   return __jsx("div", {
     className: _styles_course_scss__WEBPACK_IMPORTED_MODULE_4___default.a.course,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 23
     },
     __self: this
   }, __jsx("div", {
     className: _styles_course_scss__WEBPACK_IMPORTED_MODULE_4___default.a.header,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 24
     },
     __self: this
   }, __jsx("span", {
     className: _styles_course_scss__WEBPACK_IMPORTED_MODULE_4___default.a.time,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 25
     },
     __self: this
   }, Object(_utils_format__WEBPACK_IMPORTED_MODULE_2__["default"])(course.startTime, "HH:mm", true), "\u2010", Object(_utils_format__WEBPACK_IMPORTED_MODULE_2__["default"])(course.endTime, "HH:mm", true)), __jsx("span", {
@@ -324,21 +331,21 @@ var Course = function Course(props) {
     "data-cheap": course.price < 1000,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 29
     },
     __self: this
   }, "\xA5", course.price / 100)), __jsx("h4", {
     className: _styles_course_scss__WEBPACK_IMPORTED_MODULE_4___default.a.title,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 33
     },
     __self: this
   }, classInfo.className), __jsx("div", {
     className: _styles_course_scss__WEBPACK_IMPORTED_MODULE_4___default.a.info,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 34
     },
     __self: this
   }, __jsx(_image__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -347,30 +354,38 @@ var Course = function Course(props) {
     alt: trainer.trainerStageName,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 35
     },
     __self: this
   }), __jsx("div", {
     className: _styles_course_scss__WEBPACK_IMPORTED_MODULE_4___default.a["info-main"],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 40
     },
     __self: this
   }, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 41
     },
     __self: this
   }, trainer.trainerStageName), __jsx("div", {
     className: _styles_course_scss__WEBPACK_IMPORTED_MODULE_4___default.a.tags,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 42
     },
     __self: this
-  }, classInfo.tag.join(" · ")))));
+  }, classInfo.tag.join(" · "))), __jsx("div", {
+    className: _styles_course_scss__WEBPACK_IMPORTED_MODULE_4___default.a.status,
+    "data-status": status,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44
+    },
+    __self: this
+  }, BookingStatus[status])));
 };
 
 Course.propTypes = {
@@ -51227,7 +51242,7 @@ function (_React$Component) {
       this.setState({
         boxId: boxId
       });
-      localStorage.setItem("sm/boxId", boxId);
+      localStorage.setItem("boxId", boxId);
     }
   }, {
     key: "handleCurrentCityChange",
@@ -51237,7 +51252,7 @@ function (_React$Component) {
   }, {
     key: "componentDidMount",
     value: function componentDidMount() {
-      var currentCity = localStorage.getItem("sm/currentCity") || "北京市";
+      var currentCity = localStorage.getItem("currentCity") || "北京市";
       this.fetch(currentCity);
     }
   }, {
@@ -51255,7 +51270,7 @@ function (_React$Component) {
                   loading: true
                 });
                 _context.next = 3;
-                return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_9___default()("//raw.githubusercontent.com/RuochenLyu/supermonkey/master/static/".concat(currentCity, ".json"));
+                return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_9___default()("//raw.githubusercontent.com/RuochenLyu/ruochenlyu.github.io/master/supermonkey/".concat(currentCity, ".json"));
 
               case 3:
                 result = _context.sent;
@@ -51264,7 +51279,7 @@ function (_React$Component) {
 
               case 6:
                 json = _context.sent;
-                boxId = localStorage.getItem("sm/boxId") * 1;
+                boxId = localStorage.getItem("boxId") * 1;
                 cityMap = json.data.main.boxArea.cityMap;
                 boxList = cityMap[currentCity][0].boxList;
 
@@ -51280,8 +51295,8 @@ function (_React$Component) {
                   boxId: boxId,
                   currentCity: currentCity
                 });
-                localStorage.setItem("sm/boxId", boxId);
-                localStorage.setItem("sm/currentCity", currentCity);
+                localStorage.setItem("boxId", boxId);
+                localStorage.setItem("currentCity", currentCity);
 
               case 14:
               case "end":
@@ -51365,19 +51380,13 @@ function (_React$Component) {
           lineNumber: 81
         },
         __self: this
-      }, __jsx("nav", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 82
-        },
-        __self: this
       }, __jsx(_components_city_picker__WEBPACK_IMPORTED_MODULE_15__["default"], {
         cityList: cityList,
         currentCity: currentCity,
         onCurrentCityChange: this.handleCurrentCityChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 83
+          lineNumber: 82
         },
         __self: this
       }), __jsx(_components_box_list__WEBPACK_IMPORTED_MODULE_16__["default"], {
@@ -51387,15 +51396,15 @@ function (_React$Component) {
         onBoxIdChange: this.handleBoxIdChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88
+          lineNumber: 87
         },
         __self: this
-      })), __jsx(_components_schedule__WEBPACK_IMPORTED_MODULE_17__["default"], {
+      }), __jsx(_components_schedule__WEBPACK_IMPORTED_MODULE_17__["default"], {
         data: data,
         boxId: boxId,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 95
+          lineNumber: 93
         },
         __self: this
       })));
