@@ -59,18 +59,21 @@ class Index extends React.Component {
 
   render() {
     const { loading } = this.state;
-    if (loading) return <Loading />;
+    if (loading) {
+      return (
+        <div>
+          <Head />
+          <Loading />
+        </div>
+      );
+    }
 
     const { data, boxId, currentCity } = this.state;
     const { cityList } = data.main.boxArea;
 
     return (
       <div className={style.main}>
-        <Head
-          title="超级猩猩·课程表"
-          description="超级猩猩健身在线课程表"
-          url="https://kshift.me/supermonkey"
-        />
+        <Head />
         <nav>
           <CityPicker
             cityList={cityList}
