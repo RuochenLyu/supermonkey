@@ -65,7 +65,8 @@ body {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
-  -webkit-tap-highlight-color: transparent; }
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden; }
 
 @media (max-width: 767.98px) {
   ._1BDVL-Bhp7QlGHLiSexuYX {
@@ -219,7 +220,7 @@ body {
 ._2rCOHlF9VCur_rKM1d9WF7 {
   position: relative;
   margin: 8px 0 12px;
-  padding: 4px 8px;
+  padding: 6px 8px;
   line-height: 1.25;
   background-color: #fff;
   border-radius: 8px;
@@ -260,9 +261,9 @@ body {
 
 ._3PLjNIFOHMNKlyeNZf2hBz {
   margin-right: 8px;
-  min-width: 20px;
-  width: 20px;
-  height: 20px;
+  min-width: 24px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   overflow: hidden; }
 

@@ -377,7 +377,7 @@ var Course = function Course(props) {
       lineNumber: 42
     },
     __self: this
-  }, classInfo.tag.join(" · "))), __jsx("div", {
+  }, classInfo.tag.slice(0, 3).join(" · "))), __jsx("div", {
     className: _styles_course_scss__WEBPACK_IMPORTED_MODULE_4___default.a.status,
     "data-status": status,
     __source: {
@@ -52321,6 +52321,7 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       react_ga__WEBPACK_IMPORTED_MODULE_10__["default"].initialize("UA-150431358-1");
+      react_ga__WEBPACK_IMPORTED_MODULE_10__["default"].pageview(location.pathname);
       var currentCity = localStorage.getItem("currentCity") || "北京市";
       this.fetch(currentCity);
     }
@@ -52388,32 +52389,32 @@ function (_React$Component) {
         return __jsx("div", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 67
+            lineNumber: 68
           },
           __self: this
         }, __jsx(_components_head__WEBPACK_IMPORTED_MODULE_15__["default"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 68
+            lineNumber: 69
           },
           __self: this
         }), __jsx("div", {
           className: _styles_layout_scss__WEBPACK_IMPORTED_MODULE_13___default.a.main,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 69
+            lineNumber: 70
           },
           __self: this
         }, __jsx(_components_loading__WEBPACK_IMPORTED_MODULE_14__["default"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 70
+            lineNumber: 71
           },
           __self: this
         })), __jsx(_components_qrcode__WEBPACK_IMPORTED_MODULE_19__["default"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 72
+            lineNumber: 73
           },
           __self: this
         }));
@@ -52427,26 +52428,26 @@ function (_React$Component) {
       return __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 81
+          lineNumber: 82
         },
         __self: this
       }, __jsx(_components_qrcode__WEBPACK_IMPORTED_MODULE_19__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 82
+          lineNumber: 83
         },
         __self: this
       }), __jsx(_components_head__WEBPACK_IMPORTED_MODULE_15__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 83
+          lineNumber: 84
         },
         __self: this
       }), __jsx("div", {
         className: _styles_layout_scss__WEBPACK_IMPORTED_MODULE_13___default.a.main,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 84
+          lineNumber: 85
         },
         __self: this
       }, __jsx(_components_city_picker__WEBPACK_IMPORTED_MODULE_16__["default"], {
@@ -52455,7 +52456,7 @@ function (_React$Component) {
         onCurrentCityChange: this.handleCurrentCityChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 85
+          lineNumber: 86
         },
         __self: this
       }), __jsx(_components_box_list__WEBPACK_IMPORTED_MODULE_17__["default"], {
@@ -52465,7 +52466,7 @@ function (_React$Component) {
         onBoxIdChange: this.handleBoxIdChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 90
+          lineNumber: 91
         },
         __self: this
       }), __jsx(_components_schedule__WEBPACK_IMPORTED_MODULE_18__["default"], {
@@ -52473,7 +52474,7 @@ function (_React$Component) {
         boxId: boxId,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 96
+          lineNumber: 97
         },
         __self: this
       })));
