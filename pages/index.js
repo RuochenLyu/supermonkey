@@ -11,7 +11,7 @@ import Head from "../components/head";
 import CityPicker from "../components/city-picker";
 import BoxList from "../components/box-list";
 import Schedule from "../components/schedule";
-import Qrcode from "../components/qrcode";
+import Mobile from "../components/mobile";
 
 class Index extends React.Component {
   constructor(props) {
@@ -70,7 +70,7 @@ class Index extends React.Component {
           <div className={style.main}>
             <Loading />
           </div>
-          <Qrcode />
+          <Mobile />
         </div>
       );
     }
@@ -80,7 +80,7 @@ class Index extends React.Component {
 
     return (
       <div>
-        <Qrcode />
+        <Mobile />
         <Head />
         <div className={style.main}>
           <CityPicker
