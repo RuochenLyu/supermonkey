@@ -39,7 +39,7 @@ const Course = props => {
         />
         <div className={style["info-main"]}>
           <div>{trainer.trainerStageName}</div>
-          <div className={style.tags}>{classInfo.tag.join(" · ")}</div>
+          <div className={style.tags}>{classInfo.tag.slice(0, 3).join(" · ")}</div>
         </div>
         <div className={style.status} data-status={status}>
           {BookingStatus[status]}
