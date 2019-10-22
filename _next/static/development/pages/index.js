@@ -728,9 +728,9 @@ var Loading = function Loading() {
 
 /***/ }),
 
-/***/ "./components/qrcode.js":
+/***/ "./components/mobile.js":
 /*!******************************!*\
-  !*** ./components/qrcode.js ***!
+  !*** ./components/mobile.js ***!
   \******************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -739,45 +739,57 @@ var Loading = function Loading() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _styles_qrcode_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/qrcode.scss */ "./styles/qrcode.scss");
-/* harmony import */ var _styles_qrcode_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_qrcode_scss__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/ruochen/Documents/workspace/supermonkey/components/qrcode.js";
+/* harmony import */ var _styles_mobile_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/mobile.scss */ "./styles/mobile.scss");
+/* harmony import */ var _styles_mobile_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_mobile_scss__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/ruochen/Documents/workspace/supermonkey/components/mobile.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-var Qrcode = function Qrcode() {
+var Mobile = function Mobile() {
   return __jsx("div", {
-    className: _styles_qrcode_scss__WEBPACK_IMPORTED_MODULE_1___default.a.qrcode,
+    className: _styles_mobile_scss__WEBPACK_IMPORTED_MODULE_1___default.a.mobile,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
     },
     __self: this
-  }, __jsx("img", {
-    src: "/static/qrcode.png",
-    alt: "\u8D85\u7EA7\u7329\u7329\u5065\u8EAB",
+  }, __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
     },
     __self: this
-  }), __jsx("div", {
+  }, "\u8D85\u7EA7\u7329\u7329\xB7\u8BFE\u7A0B\u8868"), __jsx("img", {
+    src: "//i.loli.net/2019/10/22/iYGmh5J8QP6kuyX.png",
+    alt: "\u8D85\u7EA7\u7329\u7329\u5065\u8EAB",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
     },
     __self: this
-  }, "\u624B\u673A\u8BF7\u8BBF\u95EE\u300C\u8D85\u7EA7\u7329\u7329\u300D\u5FAE\u4FE1\u5C0F\u7A0B\u5E8F", __jsx("br", {
+  }), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, "\u8BF7\u7528\u7535\u8111\u8BBF\u95EE ", __jsx("b", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
     },
     __self: this
-  }), "\u67E5\u770B\u8BFE\u7A0B\u5B89\u6392"));
+  }, "super.kshift.me"), " \u67E5\u770B", __jsx("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }), "\u624B\u673A\u8BF7\u8BBF\u95EE\u5B98\u65B9\u5FAE\u4FE1\u5C0F\u7A0B\u5E8F"));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Qrcode);
+/* harmony default export */ __webpack_exports__["default"] = (Mobile);
 
 /***/ }),
 
@@ -52261,7 +52273,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_city_picker__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../components/city-picker */ "./components/city-picker.js");
 /* harmony import */ var _components_box_list__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../components/box-list */ "./components/box-list.js");
 /* harmony import */ var _components_schedule__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../components/schedule */ "./components/schedule.js");
-/* harmony import */ var _components_qrcode__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../components/qrcode */ "./components/qrcode.js");
+/* harmony import */ var _components_mobile__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../components/mobile */ "./components/mobile.js");
 
 
 
@@ -52411,7 +52423,7 @@ function (_React$Component) {
             lineNumber: 71
           },
           __self: this
-        })), __jsx(_components_qrcode__WEBPACK_IMPORTED_MODULE_19__["default"], {
+        })), __jsx(_components_mobile__WEBPACK_IMPORTED_MODULE_19__["default"], {
           __source: {
             fileName: _jsxFileName,
             lineNumber: 73
@@ -52431,7 +52443,7 @@ function (_React$Component) {
           lineNumber: 82
         },
         __self: this
-      }, __jsx(_components_qrcode__WEBPACK_IMPORTED_MODULE_19__["default"], {
+      }, __jsx(_components_mobile__WEBPACK_IMPORTED_MODULE_19__["default"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 83
