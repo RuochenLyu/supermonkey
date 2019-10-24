@@ -80,8 +80,8 @@ class Index extends React.Component {
 
     return (
       <div>
-        <Mobile />
         <Head />
+        <Mobile />
         <div className={style.main}>
           <CityPicker
             cityList={cityList}

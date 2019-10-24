@@ -1,5 +1,10 @@
 @import "./variables";
 
+.main {
+  height: 100vh;
+  overflow-x: auto;
+}
+
 @media (max-width: 767.98px) {
   .main {
     display: none;

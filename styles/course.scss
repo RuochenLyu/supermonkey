@@ -8,6 +8,7 @@
   background-color: #fff;
   border-radius: 8px;
   transition: all 200ms ease-in-out;
+  cursor: pointer;
 
   &:hover {
     @include shadow-medium;
