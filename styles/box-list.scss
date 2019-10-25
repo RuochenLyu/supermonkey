@@ -11,6 +11,10 @@ $height: 48px;
   padding: 0 8px 40px;
   overflow-y: auto;
   z-index: 1;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .box {

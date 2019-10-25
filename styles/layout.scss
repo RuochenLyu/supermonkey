@@ -3,6 +3,10 @@
 .main {
   height: 100vh;
   overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 @media (max-width: 767.98px) {
