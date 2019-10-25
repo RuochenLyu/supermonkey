@@ -41,7 +41,7 @@ $text-color-lighter: #7e8e99;
   box-shadow: 0 8px 12px 0 $color;
 }
 
-@mixin shadow-large($color: rgba(0, 0, 0, 0.16)) {
+@mixin shadow-large($color: rgba(0, 0, 0, 0.24)) {
   box-shadow: 0 12px 24px 0 $color;
 }
 
