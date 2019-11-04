@@ -32,7 +32,7 @@ class Popup extends React.Component {
         frameBorder='0'
         src={`//v.qq.com/txp/iframe/player.html?vid=${
           data.video
-        }&autoplay=true&mini=true&disableplugin=IframeBottomOpenClientBar,IframeEndRecommend,IframePauseRecommend,IframeRelateRecommend`}
+        }&autoplay=true&mini=true&show1080p=1&disableplugin=IframeBottomOpenClientBar,IframeEndRecommend,IframePauseRecommend,IframeRelateRecommend`}
         allowFullScreen
       />
     ) : null
@@ -53,6 +53,7 @@ class Popup extends React.Component {
               <span className={style.title}>适合人群</span>
             )}
             <p dangerouslySetInnerHTML={{ __html: data.suitablePeople }} />
+            <div className={style.close} onClick={this.props.onMaskClick} />
           </div>
         </div>
       </div>
