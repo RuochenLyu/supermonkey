@@ -2013,7 +2013,7 @@ function (_React$Component) {
       if (!data) return null;
       var video = data.video ? __jsx("iframe", {
         frameBorder: "0",
-        src: "//v.qq.com/txp/iframe/player.html?vid=".concat(data.video, "&autoplay=true&mini=true&disableplugin=IframeBottomOpenClientBar,IframeEndRecommend,IframePauseRecommend,IframeRelateRecommend"),
+        src: "//v.qq.com/txp/iframe/player.html?vid=".concat(data.video, "&autoplay=true&mini=true&show1080p=1&disableplugin=IframeBottomOpenClientBar,IframeEndRecommend,IframePauseRecommend,IframeRelateRecommend"),
         allowFullScreen: true,
         __source: {
           fileName: _jsxFileName,
@@ -2095,6 +2095,14 @@ function (_React$Component) {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 55
+        },
+        __self: this
+      }), __jsx("div", {
+        className: _styles_popup_scss__WEBPACK_IMPORTED_MODULE_8___default.a.close,
+        onClick: this.props.onMaskClick,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 56
         },
         __self: this
       }))));
