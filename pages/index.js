@@ -45,7 +45,6 @@ class Index extends React.Component {
 
   async fetch(currentCity) {
     this.setState({ loading: true });
-    console.log(currentCity);
 
     new AV.Query("Course")
       .equalTo("city", currentCity)
@@ -53,7 +52,6 @@ class Index extends React.Component {
       .then(data => {
         if (data.length === 0) return;
         data = data[0].attributes.data;
-        console.log(data);
 
         let boxId = localStorage.getItem("boxId") * 1;
         const { cityMap } = data.main.boxArea;

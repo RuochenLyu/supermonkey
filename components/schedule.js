@@ -28,7 +28,6 @@ class Schedule extends React.Component {
     const { scheduleList } = data.main;
 
     const listItems = scheduleList.map(item => {
-      console.log(item);
       const list = item.boxClassSchedulesList.find(x => x.boxId === boxId);
       let courses = list.classScheduleList.map(id => {
         return (
