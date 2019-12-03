@@ -54,12 +54,14 @@ for city in cities:
     response = requests.get(
         'https://busi.supermonkey.com.cn/wxClass/getClassSelectList4', headers=headers, params=params)
     data = response.json()['data']
+    scheduleSmallMap = data['scheduleSmallMap']
 
     for scheduleList in data['main']['scheduleList']:
         for boxClassSchedulesList in scheduleList['boxClassSchedulesList']:
             for scheduleId in boxClassSchedulesList['classScheduleList']:
+                scheduleId = str(scheduleId)
                 scheduleData = requests.get(
-                    'https://busi.supermonkey.com.cn/wxClass/getScheduleDetail?scheduleId=' + str(scheduleId), headers=headers).json()
+                    'https://busi.supermonkey.com.cn/wxClass/getScheduleDetail?scheduleId=' + scheduleId + '&sk=' + str(scheduleSmallMap[scheduleId]['sk']), headers=headers).json()
                 if 'data' in scheduleData and 'classinfoMap' in scheduleData['data']:
                     for classId, info in scheduleData['data']['classinfoMap'].items():
                         if str(classId) in class_info:
