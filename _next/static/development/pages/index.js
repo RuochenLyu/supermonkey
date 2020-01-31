@@ -2200,7 +2200,6 @@ function (_React$Component) {
           boxId = _this$props.boxId;
       var scheduleList = data.main.scheduleList;
       var listItems = scheduleList.map(function (item) {
-        console.log(item);
         var list = item.boxClassSchedulesList.find(function (x) {
           return x.boxId === boxId;
         });
@@ -2212,7 +2211,7 @@ function (_React$Component) {
             onCourseClick: _this2.handleCourseClick,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 35
+              lineNumber: 34
             },
             __self: this
           });
@@ -2223,30 +2222,24 @@ function (_React$Component) {
             className: _styles_schedule_scss__WEBPACK_IMPORTED_MODULE_12___default.a.init,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 46
+              lineNumber: 45
             },
             __self: this
-          }, "\u7329\u7329\u6392\u8BFE\u4E2D", __jsx("br", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 48
-            },
-            __self: this
-          }), "\u6BCF\u5468\u4E94 22:30 \u53D1\u5E03");
+          }, list.classScheduleListEmptyReason);
         }
 
         var today = Object(_utils_isToday__WEBPACK_IMPORTED_MODULE_9__["default"])(item.date) ? __jsx("span", {
           className: _styles_schedule_scss__WEBPACK_IMPORTED_MODULE_12___default.a.today,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 55
+            lineNumber: 50
           },
           __self: this
         }, "\u4ECA\u5929") : __jsx("span", {
           className: _styles_schedule_scss__WEBPACK_IMPORTED_MODULE_12___default.a.desc,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 57
+            lineNumber: 52
           },
           __self: this
         }, Object(_utils_format__WEBPACK_IMPORTED_MODULE_8__["default"])(item.date, "E"));
@@ -2255,26 +2248,26 @@ function (_React$Component) {
           className: _styles_schedule_scss__WEBPACK_IMPORTED_MODULE_12___default.a.list,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 61
+            lineNumber: 56
           },
           __self: this
         }, __jsx("div", {
           className: _styles_schedule_scss__WEBPACK_IMPORTED_MODULE_12___default.a.header,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 62
+            lineNumber: 57
           },
           __self: this
         }, __jsx("h2", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 63
+            lineNumber: 58
           },
           __self: this
         }, Object(_utils_format__WEBPACK_IMPORTED_MODULE_8__["default"])(item.date)), today), __jsx("div", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 66
+            lineNumber: 61
           },
           __self: this
         }, courses));
@@ -2283,14 +2276,14 @@ function (_React$Component) {
         className: _styles_schedule_scss__WEBPACK_IMPORTED_MODULE_12___default.a.main,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 72
+          lineNumber: 67
         },
         __self: this
       }, __jsx("header", {
         className: _styles_schedule_scss__WEBPACK_IMPORTED_MODULE_12___default.a["main-header"],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 73
+          lineNumber: 68
         },
         __self: this
       }), listItems, __jsx(_components_popup__WEBPACK_IMPORTED_MODULE_11__["default"], {
@@ -2298,7 +2291,7 @@ function (_React$Component) {
         onMaskClick: this.handleMaskClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 75
+          lineNumber: 70
         },
         __self: this
       }));
@@ -53947,11 +53940,9 @@ function (_React$Component) {
                 this.setState({
                   loading: true
                 });
-                console.log(currentCity);
                 new leancloud_storage__WEBPACK_IMPORTED_MODULE_10___default.a.Query("Course").equalTo("city", currentCity).find().then(function (data) {
                   if (data.length === 0) return;
                   data = data[0].attributes.data;
-                  console.log(data);
                   var boxId = localStorage.getItem("boxId") * 1;
                   var cityMap = data.main.boxArea.cityMap;
                   var boxList = cityMap[currentCity][0].boxList;
@@ -53973,7 +53964,7 @@ function (_React$Component) {
                   localStorage.setItem("currentCity", currentCity);
                 });
 
-              case 3:
+              case 2:
               case "end":
                 return _context.stop();
             }
@@ -53994,32 +53985,32 @@ function (_React$Component) {
         return __jsx("div", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 80
+            lineNumber: 78
           },
           __self: this
         }, __jsx(_components_head__WEBPACK_IMPORTED_MODULE_15__["default"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 81
+            lineNumber: 79
           },
           __self: this
         }), __jsx("div", {
           className: _styles_layout_scss__WEBPACK_IMPORTED_MODULE_13___default.a.main,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 82
+            lineNumber: 80
           },
           __self: this
         }, __jsx(_components_loading__WEBPACK_IMPORTED_MODULE_14__["default"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 83
+            lineNumber: 81
           },
           __self: this
         })), __jsx(_components_mobile__WEBPACK_IMPORTED_MODULE_19__["default"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 85
+            lineNumber: 83
           },
           __self: this
         }));
@@ -54033,26 +54024,26 @@ function (_React$Component) {
       return __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 94
+          lineNumber: 92
         },
         __self: this
       }, __jsx(_components_head__WEBPACK_IMPORTED_MODULE_15__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 95
+          lineNumber: 93
         },
         __self: this
       }), __jsx(_components_mobile__WEBPACK_IMPORTED_MODULE_19__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 96
+          lineNumber: 94
         },
         __self: this
       }), __jsx("div", {
         className: _styles_layout_scss__WEBPACK_IMPORTED_MODULE_13___default.a.main,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 97
+          lineNumber: 95
         },
         __self: this
       }, __jsx(_components_city_picker__WEBPACK_IMPORTED_MODULE_16__["default"], {
@@ -54061,7 +54052,7 @@ function (_React$Component) {
         onCurrentCityChange: this.handleCurrentCityChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 98
+          lineNumber: 96
         },
         __self: this
       }), __jsx(_components_box_list__WEBPACK_IMPORTED_MODULE_17__["default"], {
@@ -54071,7 +54062,7 @@ function (_React$Component) {
         onBoxIdChange: this.handleBoxIdChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103
+          lineNumber: 101
         },
         __self: this
       }), __jsx(_components_schedule__WEBPACK_IMPORTED_MODULE_18__["default"], {
@@ -54079,7 +54070,7 @@ function (_React$Component) {
         boxId: boxId,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 109
+          lineNumber: 107
         },
         __self: this
       })));
