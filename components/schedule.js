@@ -42,11 +42,7 @@ class Schedule extends React.Component {
 
       if (list.classScheduleListEmptyReason) {
         courses = (
-          <div className={style.init}>
-            猩猩排课中
-            <br />
-            每周五 22:30 发布
-          </div>
+          <div className={style.init}>{list.classScheduleListEmptyReason}</div>
         );
       }
 
@@ -82,7 +78,7 @@ class Schedule extends React.Component {
 
 Schedule.propTypes = {
   data: PropTypes.object,
-  boxId: PropTypes.number,
+  boxId: PropTypes.number
 };
 
 export default Schedule;
